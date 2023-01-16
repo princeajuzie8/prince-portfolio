@@ -3,6 +3,7 @@ import styled from "styled-components";
 import tele from "../images/tele.png";
 import address from "../images/location.png";
 import email from "../images/mail.png";
+import Footer from "../component/footer";
 const Container = styled.div`
   background-color: black;
   background-size: cover;
@@ -25,7 +26,7 @@ const Container = styled.div`
         margin-top: 5px;
 
         .phone {
-          background-color: #282525;
+          background-color: #212425;
           padding: 15px 5px 15px 35px;
           border-radius: 10px;
           margin-bottom: 20px;
@@ -54,7 +55,7 @@ const Container = styled.div`
           }
         }
         .email {
-          background-color: #282525;
+          background-color: #212425;
           padding: 15px 50px 15px 35px;
           border-radius: 10px;
           margin-bottom: 20px;
@@ -83,7 +84,7 @@ const Container = styled.div`
           }
         }
         .address {
-          background-color: #282525;
+          background-color: #212425;
           padding: 15px 50px 15px 35px;
           border-radius: 10px;
           margin-bottom: 20px;
@@ -142,7 +143,197 @@ const Container = styled.div`
                 color: #ff2d55;
               }
             }
-            input {
+            input[type=text],[type=email]{
+              transform: scale(1);
+              padding: 10px 35px;
+              background-color: transparent;
+              margin-bottom: 30px;
+               width: 90%;
+              outline: none;
+              border: none;
+              border-bottom: 1px solid gray;
+              background: transparent;
+              color: #fff;
+            
+            }
+
+            .submit {
+              font-weight: bold;
+              padding: 10px 25px;
+              background-color: transparent;
+              border-radius: 0.5rem;
+              color: #fff;
+              border: 2px solid #b5aaaa;
+              font-size: 15px;
+              :hover {
+                background-image: linear-gradient(to right, #fa5252, #dd2476);
+                color: white;
+                transition: all;
+               border-image: linear-gradient(to left, #fa5252, #dd2476);
+               border-image-slice: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .header {
+    display: flex;
+    color: #fff;
+    align-items: center;
+
+    .sec1 {
+      margin-right: 20px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      position: relative;
+    }
+
+    .sec2 {
+      height: 2px;
+      width: 190px;
+      border-radius: 50px;
+      background-image: linear-gradient(to right, #dd2476, #fa5252);
+    }
+  }
+  @media  (max-width : 1100px) {
+    .border {
+    font-family: poppins, sans-serif;
+    background: #111111;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: 30px;
+    padding: 35px 80px;
+    height: auto;
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 80px;
+      .form1 {
+        margin-top: 5px;
+
+        .phone {
+          background-color: #212425;
+          padding: 15px 5px 15px 35px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          .phone1 {
+            font-family: sans-serif;
+            position: relative right 5px;
+            display: flex;
+            margin-left: 0;
+            align-items: flex-start;
+            .logo {
+              margin-top: 19px;
+            }
+            .test {
+              margin-left: 8px;
+              h2 {
+                font-weight: bold;
+                color: #fff;
+                font-size: 20px;
+              }
+              p {
+                color: #b5aaaa;
+                font-family: sans-serif;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .email {
+          background-color: #212425;
+          padding: 15px 50px 15px 35px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          .email1 {
+            font-family: sans-serif;
+            position: relative right 5px;
+            display: flex;
+            margin-left: 0;
+            align-items: flex-start;
+            .logo {
+              margin-top: 19px;
+            }
+            .test {
+              margin-left: 8px;
+              h2 {
+                font-weight: bold;
+                color: #fff;
+                font-size: 20px;
+              }
+              p {
+                color: #b5aaaa;
+                font-family: sans-serif;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .address {
+          background-color: #212425;
+          padding: 15px 50px 15px 35px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          .address1 {
+            font-family: sans-serif;
+            position: relative right 5px;
+            display: flex;
+            margin-left: 0;
+            align-items: flex-start;
+            .logo {
+              margin-top: 19px;
+            }
+            .test {
+              margin-left: 8px;
+              h2 {
+                font-weight: bold;
+                color: #fff;
+                font-size: 20px;
+              }
+              p {
+                color: #b5aaaa;
+                font-family: sans-serif;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+      .form2 {
+        background-color: transparent;
+        border: 2px solid #1f1e1e;
+        border-radius: 10px;
+        padding: 15px 35px;
+        .gen {
+          .test {
+            font-family: sans-serif;
+            h1 {
+              color: #b5aaaa;
+              font-size: 25px;
+            }
+            h2 {
+              color: #fff;
+            }
+          }
+        }
+
+        .allform {
+          align-items: center;
+          justify-content: space-between;
+          form {
+            margin-top: 50px;
+            label {
+              color: #b5aaaa;
+              transform: scale(1);
+              :focus {
+                color: #ff2d55;
+              }
+            }
+            input[type=text],[type=email] {
               transform: scale(1);
               padding: 10px 35px;
               background-color: transparent;
@@ -195,6 +386,200 @@ const Container = styled.div`
       border-radius: 50px;
       background-image: linear-gradient(to right, #dd2476, #fa5252);
     }
+  } 
+  }
+  @media  (max-width : 600px){
+       .border {
+    font-family: poppins, sans-serif;
+    background: #111111;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding-top: 0;
+     padding-left: 12px;
+    margin-top: 0;
+    .contact {
+       margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+         .form1 {
+       
+
+        .phone {
+           
+          background-color: #212425;
+          width: 83vw;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          .phone1 {
+            font-family: sans-serif;
+            position: relative right 5px;
+            display: flex;
+            margin-left: 0;
+            align-items: flex-start;
+            .logo {
+              margin-top: 19px;
+            }
+            .test {
+              margin-left: 8px;
+              h2 {
+                font-weight: bold;
+                color: #fff;
+                font-size: 20px;
+              }
+              p {
+                color: #b5aaaa;
+                font-family: sans-serif;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .email {
+          background-color: #212425;
+         width: 71vw;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          .email1 {
+            font-family: sans-serif;
+            position: relative right 5px;
+            display: flex;
+            margin-left: 0;
+            align-items: flex-start;
+            .logo {
+              margin-top: 19px;
+            }
+            .test {
+              margin-left: 8px;
+              h2 {
+                font-weight: bold;
+                color: #fff;
+                font-size: 20px;
+              }
+              p {
+                color: #b5aaaa;
+                font-family: sans-serif;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .address {
+          background-color: #212425;
+        width: 71vw;
+          border-radius: 10px;
+         
+          .address1 {
+            font-family: sans-serif;
+            position: relative right 5px;
+            display: flex;
+            margin-left: 0;
+            align-items: flex-start;
+            .logo {
+              margin-top: 19px;
+            }
+            .test {
+              margin-left: 8px;
+              h2 {
+                font-weight: bold;
+                color: #fff;
+                font-size: 20px;
+              }
+              p {
+                color: #b5aaaa;
+                font-family: sans-serif;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+      .form2 {
+        background-color: transparent;
+        border: 2px solid #1f1e1e;
+        border-radius: 10px;
+      
+padding:10px;
+        .gen {
+        
+          .test {
+            font-family: sans-serif;
+            h1 {
+              color: #b5aaaa;
+              font-size: 20px;
+            }
+            h2 {
+              color: #fff;
+            }
+          }
+        }
+
+        .allform {
+          align-items: center;
+          justify-content: space-between;
+          margin: 0;
+          margin-left: 0;
+         padding:10px;
+          form {
+          
+            label {
+              color: #b5aaaa;
+              transform: scale(1);
+              :focus {
+                color: #ff2d55;
+              }
+            }
+            input[type=text],[type=email]{
+              transform: scale(1);
+           padding: 10px;
+              background-color: transparent;
+              margin-bottom: 30px;
+              width: 90%;
+              outline: none;
+              border: none;
+              border-bottom: 1px solid gray;
+              background: transparent;
+              color: #fff;
+            
+            }
+
+            .submit {
+              font-weight: bold;
+              padding: 10px 25px;
+              background-color: transparent;
+              border-radius: 0.5rem;
+              color: #fff;
+              border: 2px solid #b5aaaa;
+              font-size: 15px;
+              :hover {
+                background-image: linear-gradient(to right, #fa5252, #dd2476);
+                color: white;
+                transition: all;
+               border-image: linear-gradient(to left, #fa5252, #dd2476);
+               border-image-slice: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .header {
+    display: flex;
+    color: #fff;
+    align-items: center;
+
+    .sec1 {
+      margin-right: 0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      position: relative;
+    }
+
+    .sec2 {
+     display: none;
+    }
+  } 
   }
 `;
 
@@ -262,7 +647,7 @@ const Contact = () => {
                       type="text"
                       name=""
                       id="name"
-                      size={70}
+                    
                       required
                     />{" "}
                     <br />
@@ -271,7 +656,7 @@ const Contact = () => {
                       type="email"
                       name=""
                       id="email"
-                      size={70}
+                   
                       required
                     />{" "}
                     <br />
@@ -280,7 +665,7 @@ const Contact = () => {
                       type="text"
                       name=""
                       id="message"
-                      size={70}
+                  
                       required
                     />
                     <br />
@@ -299,6 +684,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </Container>
   );
 };
