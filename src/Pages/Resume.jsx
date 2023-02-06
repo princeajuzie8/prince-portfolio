@@ -47,7 +47,7 @@ const Container = styled.div`
              border: 2px solid #282727;
              border-radius: 5px;
              justify-content: center;
-            height: 80px;
+            height: auto;
             padding: 20px 80px 40px 30px; 
             background: transparent;
             width: fit-content;
@@ -294,7 +294,7 @@ const Container = styled.div`
              border: 2px solid #282727;
              border-radius: 5px;
              justify-content: center;
-            height: 100px;
+             height: auto;
             padding: 20px 80px 40px 30px; 
             background: transparent;
             width: fit-content;
@@ -319,7 +319,7 @@ const Container = styled.div`
     display: flex;
     color: #fff;
     align-items: center;
-
+   margin-top: 30px;
     .sec1 {
       margin-right: 20px;
       font-family: "Courier New", Courier, monospace;
@@ -540,10 +540,14 @@ grid-template-columns: 1fr;
              border: 2px solid #282727;
              border-radius: 5px;
              justify-content: center;
-            height:  fit-content;
-            padding: 20px 120px 30px 30px; 
+              height: auto;
+            
             background: transparent;
-            width: 200px;
+          
+          
+            padding: 20px 80px 40px 30px; 
+        
+            width: fit-content;
           
           .sec1{
           color: #b7b7b7;
@@ -571,6 +575,7 @@ grid-template-columns: 1fr;
     .sec1 {
 margin-right: 0;
 margin-left: 30px;
+margin-top: 19px;
 
 
       font-family: "Courier New", Courier, monospace;
@@ -983,13 +988,13 @@ const Resume = () => {
                                 <div className="sec1"><p>Digital Design</p></div>
                                 <div className="sec1"><p>marketing</p></div>
                                 <div className="sec1"><p>Social Media</p></div>
-                                <div className="sec1"><p>print</p></div>
+                                <div className="sec1"><p>content writer</p></div>
                             </div>
                             <div className="care">
                                 <div className="sec1"><p>Time Management</p></div>
                                 <div className="sec1"><p>Flexibility</p></div>
-                                <div className="sec1"><p>print</p></div>
-                                <div className="sec1"><p>print</p></div>
+                                <div className="sec1"><p>ui</p></div>
+                                <div className="sec1"><p>ux</p></div>
                             </div>
                             <div className="care">
                                 <div className="sec1"><p>Time Management</p></div>

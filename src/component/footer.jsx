@@ -7,6 +7,7 @@ import {
  
 } from "react-icons/bs";
 import { SiTiktok } from "react-icons/si"
+import { useState } from "react";
 
 const Main = styled.div`
   margin-top: 120px;
@@ -52,7 +53,7 @@ const Main = styled.div`
 
   @media (max-width: 1100px) {
     .groupfooter4 {
-    background-color: #020c1b;
+    background-color: black;
     color: aliceblue;
     display: flex;
     justify-content: space-between;
@@ -80,11 +81,11 @@ const Main = styled.div`
         li {
           list-style: none;
 
-          .icon {
-            color: #0ff;
+        .icon {
+            color: #fff;
 
             :hover {
-              color: #fff;
+          color: #fa5274;
               cursor: pointer;
             }
           }
@@ -126,11 +127,11 @@ const Main = styled.div`
         li {
           list-style: none;
 
-          .icon {
-            color: gold;
+        .icon {
+            color: #fff;
 
             :hover {
-              color: #fff;
+          color: #fa5274;
               cursor: pointer;
             }
           }
@@ -189,12 +190,17 @@ const Main = styled.div`
 `;
 
 const Footer = () => {
+  let date = new Date()
+  let y = date.getFullYear()
+  // THIS RETURNS THE YEAR 
+  const [year, setYear] = useState( y )
+
     return (
         <Main>
             <div className="groupfooter4">
                 <div className="a">
                     <p>
-                        <i className="fa-solid fa-copyright"></i>2022 Prince Ajuzie. All
+              <i className="fa-solid fa-copyright"></i>{year} Prince Ajuzie. All
                         rights reserved. -- Privacy Policy - Terms of Services
                     </p>
                 </div>

@@ -3,10 +3,19 @@ import styled from "styled-components";
 import tele from "../images/tele.png";
 import address from "../images/location.png";
 import email from "../images/mail.png";
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 import Footer from "../component/footer";
+import {  useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
+import { Toast } from 'primereact/toast';
+
 const Container = styled.div`
   background-color: black;
   background-size: cover;
+  margin: 0;
+  padding: 0;
   background-position: center;
   width: auto;
   .border {
@@ -148,7 +157,7 @@ const Container = styled.div`
               padding: 10px 35px;
               background-color: transparent;
               margin-bottom: 30px;
-               width: 90%;
+               width: 100%;
               outline: none;
               border: none;
               border-bottom: 1px solid gray;
@@ -336,6 +345,7 @@ const Container = styled.div`
             input[type=text],[type=email] {
               transform: scale(1);
               padding: 10px 35px;
+              width: 100%;
               background-color: transparent;
               margin-bottom: 30px;
               outline: none;
@@ -401,6 +411,8 @@ const Container = styled.div`
        margin: auto;
       display: grid;
       grid-template-columns: 1fr;
+      align-items: center;
+      margin-left: 20px;
          .form1 {
        
 
@@ -435,8 +447,9 @@ const Container = styled.div`
           }
         }
         .email {
+         
           background-color: #212425;
-         width: 71vw;
+       width: 83vw;
           border-radius: 10px;
           margin-bottom: 20px;
           .email1 {
@@ -465,7 +478,7 @@ const Container = styled.div`
         }
         .address {
           background-color: #212425;
-        width: 71vw;
+        width: 83vw;
           border-radius: 10px;
          
           .address1 {
@@ -497,8 +510,8 @@ const Container = styled.div`
         background-color: transparent;
         border: 2px solid #1f1e1e;
         border-radius: 10px;
-      
-padding:10px;
+      width: 100%;
+padding:20px;
         .gen {
         
           .test {
@@ -533,7 +546,7 @@ padding:10px;
            padding: 10px;
               background-color: transparent;
               margin-bottom: 30px;
-              width: 90%;
+              width: 100%;
               outline: none;
               border: none;
               border-bottom: 1px solid gray;
@@ -569,6 +582,7 @@ padding:10px;
     align-items: center;
 
     .sec1 {
+      margin-top: 19px;
       margin-right: 0;
       font-family: "Courier New", Courier, monospace;
       font-size: 1.2rem;
@@ -581,13 +595,49 @@ padding:10px;
     }
   } 
   }
+
+
 `;
 
 const Contact = () => {
-  return (
+  
+  const toast = useRef(null);
+
+  const form = useRef();
+  const showSuccess = () => {
+    toast.current.show({ severity: 'success', summary: 'Success Message', detail: 'Email sent successfully', life: 3000 });
+  }
+
+
+
+  const showWarn = () => {
+    toast.current.show({ severity: 'warn', summary: 'Unable to send Email', detail: 'Network Error', life: 3000 });
+  }
+
+  const [ispending,setispending] = useState(false)
+  const onsubmmit = (e) => {
+    e.preventDefault()
+setispending(true)
+    emailjs.sendForm('service_g97owxl', 'template_umbfdxc', form.current, 'o3dlBwqjWQZsB4mwg')
+      .then((result) => {
+        console.log(result.text);
+        setispending(false)
+        console.log('message sent')
+        showSuccess()
+        e.target.reset()
+      }, (error) => {
+        showWarn()
+        console.log(error.text);
+        setispending(false)
+      });
+
+
+  }
+   return (
     <Container>
       <div className="general">
-        <Navbar />
+         <Navbar />
+         <Toast ref={toast} />
         <div className="border">
           <div className="header">
             <div className="sec1">
@@ -641,20 +691,20 @@ const Contact = () => {
                   <h2>design work or partnerships.</h2>
                 </div>
                 <div className="allform">
-                  <form action="">
+                   <form action="" ref={form} onSubmit={onsubmmit}>
                     <label htmlFor="name"> Name *</label> <br />
                     <input
                       type="text"
-                      name=""
-                      id="name"
-                    
+                       name="full-Name"
+                         
+                       
                       required
                     />{" "}
                     <br />
                     <label htmlFor="email"> Email *</label> <br />
                     <input
                       type="email"
-                      name=""
+                       name="email"
                       id="email"
                    
                       required
@@ -663,20 +713,31 @@ const Contact = () => {
                     <label htmlFor="message"> Message *</label> <br />
                     <input
                       type="text"
-                      name=""
-                      id="message"
-                  
+                       name="message"
+                       id="message"
+                      
+                       
                       required
                     />
                     <br />
-                    <input
+                 { !ispending && <input
                       type="submit"
                       value="submit"
                       required
                       height={20}
                       width={5}
                       className="submit"
-                    />
+                     />}
+                      { ispending && <input
+                      type="submit"
+                      value="Loading.."
+                      required
+                      height={20}
+                      width={5}
+                       className="submit"
+                       disabled
+                       
+                    />  }
                   </form>
                 </div>
               </div>

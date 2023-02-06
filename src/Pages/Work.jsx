@@ -4,7 +4,7 @@ import { GiGraduateCap } from "react-icons/gi"
 import { FaAward } from "react-icons/fa";
 import { CgBriefcase } from "react-icons/cg";
 import Footer from "../component/footer";
-import { CircularProgress } from "@mui/material";
+import { ProgressSpinner } from 'primereact/progressspinner';
 
 const Container = styled.div`
   background-color: black;
@@ -118,7 +118,7 @@ const Work = () => {
 
           </div>
           <div className="ALL">
-            <CircularProgress  className="icon"/>
+            <ProgressSpinner   className="icon"/>
           
           </div>
                 

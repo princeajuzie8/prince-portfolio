@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { MdOutlineCancel } from "react-icons/md"
-import { FiPlusCircle } from "react-icons/fi";
-import { useState } from "react";
-import profile from "../images/profile2.jpeg"
+
+
+import smallpic from "../images/small pic.jpg"
 import {
-  BsDribbble,
+
   BsFacebook,
-  BsLinkedin,
+
   BsTwitter,
 
 } from "react-icons/bs";
@@ -707,7 +707,7 @@ const Container = styled.div`
 
         .gen{
           color: white;
-            height: 75vh;
+            height: 65vh;
             overflow: hidden;
             margin-top: 0;
             margin-bottom: 0;
@@ -754,7 +754,7 @@ const Container = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
   height: auto;
-   width: 95vw;
+   width: 90vw;
                 .blogimg{
 
                  
@@ -799,8 +799,8 @@ font-weight: 700;
         }
         .userprofile{
        
-          height: 25vh;
-          width: 80vw;
+          height: 20vh;
+          width: 78vw;
           padding: 10px;
            background: linear-gradient(#232220, #232220) padding-box,
              linear-gradient(to right, #fa5252, #dd2476) border-box;
@@ -941,6 +941,340 @@ font-weight: 700;
           outline: none;
           color: white;
           padding: 10px;
+        width: 78vw;
+          font-size: 15px;
+          height: 10vh;
+            }
+           .submit{
+            margin: 20px 0px 20px 0px;
+            input{
+              padding: 15px 40px 15px 40px;
+              background-image: linear-gradient(to right, #fa5252, #dd2476);
+              border: none;
+              color: white;
+              border-radius: 40px;
+              font-size: 15px;
+              cursor: pointer;
+              :hover{
+                 color: white;
+                background-image: linear-gradient(to right, #dd2476, #fa5252);
+              }
+            }
+           }
+          }
+        }
+        }
+        
+      }
+     
+     
+      }
+     
+
+      
+    
+    }
+    }}
+
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+ .modal {
+
+
+ width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: fixed;
+      z-index: 100;
+    .overlay {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: fixed;
+      background: #0000003d;
+
+      
+      .general{
+       
+
+ .modal-content {
+ position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        background: #323232;  
+        padding-bottom: 10px;
+        border-radius: 20px;
+        
+        width: 95vw;
+        
+        .header1 {
+        text-align: right;
+        .icon{
+          #cancel{
+            color: white;
+            font-size: 40px;
+ 
+    margin: 3px 20px; 
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition:  0.2s ease-out;
+    transition:  0.2s ease-out;
+            cursor: pointer;
+           &:hover{
+                color: red;
+                -webkit-transform: rotateZ(45deg);
+      -moz-transform: rotateZ(45deg);
+      transform: rotateZ(45deg);
+            }
+          }
+           
+        }
+        }
+
+        .gen{
+          color: white;
+            height: 60vh;
+            overflow: hidden;
+            margin-top: 0;
+            margin-bottom: 0;
+       margin-right: 4%;
+      
+        margin-left: 4%;
+      overflow-y: scroll;
+     
+      border-radius: 10px;
+       
+      ::-webkit-scrollbar {
+        width: 10px;
+     
+        
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px ;
+        padding-top: 30px;
+        border-radius: 10px;
+        color: #000000;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #4F4F4F;
+        border-radius: 10px;
+        padding: 20px;
+  
+      }
+
+   
+        .sec1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+            img{
+                margin-right: 40px;
+              border-radius: 0.75rem;
+            object-fit: cover;
+          background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  height: auto;
+   width: 95vw;
+                .blogimg{
+
+                 
+                }
+               
+            }
+        }
+        .alltest{
+
+  /* margin-top: 0;
+  margin-bottom: 0; */
+.sub{
+     margin-top: 10px;
+          display: flex;
+          align-items: center;
+        
+          .dot{
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 5px;
+            width: 5px;
+            border-radius: 50px;
+            background-color: #44566C;
+          }
+          .date{
+            font-size: 15px;
+          }
+          .tittle{
+             font-size: 15px;
+          }
+        }
+        .maintittle{
+    
+            font-size: 12px;
+font-weight: 700;
+        }
+        .description{
+          font-weight: 500;
+          line-height: 25px;
+          font-size: 15px;
+       
+        }
+        .userprofile{
+       
+          height: 25vh;
+          width: 80vw;
+          padding: 10px;
+           background: linear-gradient(#232220, #232220) padding-box,
+             linear-gradient(to right, #fa5252, #dd2476) border-box;
+  border: 1.5px solid transparent;
+        
+          border-radius: 10px;
+          display: flex;
+          gap: 20px;
+          align-items: center;
+       
+          .image{
+           
+            img{
+              max-width: 75px;
+              margin-left: 5px;
+             border-radius: 10px;
+              margin-bottom: 35px;
+              height: auto;
+            }
+          }
+          .form{
+
+            .sec1{
+            
+              align-items: center;
+              .name{
+                font-size: 15px;
+
+              }
+              .min{
+                color: #A9A9A9;
+                font-size: 13px;
+              }
+            }
+            .sec2{
+              
+               padding-top: 0;
+              .p{
+                 color: #A9A9A9;
+                 font-size: 13px
+              }
+              span{
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .socials{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+         float: none;
+      span{
+              margin-top: 20px;
+              margin-right: 5px;
+            }
+        .icons{
+          .socialmedia{
+            display: flex;
+          
+            justify-content: space-between;
+            margin-right: 50px;
+             gap: 10px;
+             .soc{
+              margin-top: 20px;
+            cursor: pointer;
+           height: 35px;
+            border-radius: 5px;
+            width: 35px;
+             background-color: #212425;
+             align-items: center;
+             text-align: center;
+             display: flex;
+             justify-content: center;
+
+
+             :hover{
+              background-image: linear-gradient(to right, #fa5252, #dd2476);
+              color: #fff;
+             }
+             
+
+             #fb{
+          color: #1773EA;
+
+          :hover{
+            color: #fff;
+          }
+             }
+             #tw{
+             color: #1C9CEA;
+
+             :hover{
+            color: #fff;
+          }
+             }
+             #li{
+            color: #0072B1;
+
+            :hover{
+            color: #fff;
+          }
+             }
+             #tk{
+             color: #D84880;
+
+             :hover{
+            color: #fff;
+          }
+             }
+
+             
+ .same{
+       
+
+            font-size: 15px;
+
+            
+           
+          }
+
+          
+             
+             }
+         
+            
+          }
+        }
+        }
+
+        .reply{
+          margin-top:  20px;
+          .form{
+            #area{
+ background-color: #242424;
+          border: none;
+          border-radius: 5px;
+          outline: none;
+          color: white;
+          padding: 10px;
           width: 80vw;
           font-size: 15px;
           height: 10vh;
@@ -977,6 +1311,7 @@ font-weight: 700;
     }}
 
 }
+
 `;
 const Blogmodal = ({ setOpenmodal, blog, img, tittle, smallimage, date, body, description }) => {
 
@@ -1043,7 +1378,7 @@ const Blogmodal = ({ setOpenmodal, blog, img, tittle, smallimage, date, body, de
 
                   <div className="userprofile">
                     <div className="image">
-                      <img src="https://bostamireact.ibthemespro.com/static/media/about.01c11c889888a40123f4.jpg" alt="" />
+                      <img src={smallpic} alt="" />
                     </div>
                     <div className="form">
                       <div className="sec1">

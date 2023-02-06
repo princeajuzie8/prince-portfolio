@@ -5,7 +5,6 @@ import { FaMobileAlt } from "react-icons/fa";
 import { FaEnvelopeOpenText } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { FaCalendarAlt } from "react-icons/fa";
-import { SiMediamarkt } from "react-icons/si";
 import { BiCodeAlt } from "react-icons/bi";
 import { FaRegObjectUngroup } from "react-icons/fa";
 import { FaCogs } from "react-icons/fa";
@@ -93,8 +92,14 @@ const Container = styled.div`
           display: flex;
           text-align: start;
           .b {
+            
             span {
               display: block;
+            }
+            a{
+               
+              text-decoration: none;
+            
             }
             .connect {
               font-size: 15px;
@@ -119,6 +124,7 @@ const Container = styled.div`
             background-color: #2c2929;
             color: #dd2476;
             margin-bottom: 10px;
+           
           }
           span {
             font-weight: bold;
@@ -188,7 +194,7 @@ const Container = styled.div`
         .user1 {
           border: 2px solid #312f2f;
           padding: 30px 40px;
-          width: 80%;
+          width: 100%;
           background-color: #1b1919;
           border-radius: 5px;
           margin-bottom: 20px;
@@ -219,7 +225,7 @@ const Container = styled.div`
         .user2 {
            border: 2px solid #312f2f;
           padding: 30px 40px;
-          width: 80%;
+         width: 100%;
           background-color: #1b1919;
           border-radius: 5px;
           margin-bottom: 20px;
@@ -253,7 +259,7 @@ const Container = styled.div`
         .user1 {
           border: 2px solid #312f2f;
           padding: 30px 40px;
-          width: 80%;
+          width: 100%;
           background-color: #1b1919;
           border-radius: 5px;
           margin-bottom: 20px;
@@ -286,7 +292,7 @@ const Container = styled.div`
         .user2{
          border: 2px solid #312f2f;
           padding: 30px 40px;
-          width: 80%;
+         width: 100%;
           background-color: #1b1919;
           border-radius: 5px;
           margin-bottom: 20px;
@@ -398,6 +404,11 @@ const Container = styled.div`
             span {
               display: block;
             }
+             a{
+               
+              text-decoration: none;
+            
+            }
             .connect {
               font-size: 15px;
               font-family: sans-serif;
@@ -487,7 +498,7 @@ const Container = styled.div`
         .user1 {
           border: 2px solid #312f2f;
           padding: 30px 40px;
-          width: 80%;
+           width: 100%;
           height: auto;
           background-color: #1b1919;
           border-radius: 5px;
@@ -519,7 +530,7 @@ const Container = styled.div`
         .user2 {
            border: 2px solid #312f2f;
           padding: 30px 40px;
-          width: 80%;
+           width: 100%;
           height: auto;
           background-color: #1b1919;
           border-radius: 5px;
@@ -554,7 +565,7 @@ const Container = styled.div`
         .user1 {
           border: 2px solid #312f2f;
           padding: 30px 40px;
-          width: 80%;
+           width: 100%;
           height: auto;
           background-color: #1b1919;
           border-radius: 5px;
@@ -588,7 +599,7 @@ const Container = styled.div`
         .user2{
            border: 2px solid #312f2f;
           padding: 30px 40px;
-          width: 80%;
+           width: 100%;
           height: auto;
           background-color: #1b1919;
           border-radius: 5px;
@@ -702,6 +713,11 @@ const Container = styled.div`
             span {
               display: block;
             }
+             a{
+               
+              text-decoration: none;
+            
+            }
             .connect {
               font-size: 15px;
               font-family: sans-serif;
@@ -794,7 +810,7 @@ const Container = styled.div`
       
           border: 2px solid #312f2f;
           padding: 20px 20px;
-          width: 80%;
+           width: 90%;
           height: auto;
           background-color: #1b1919;
           border-radius: 5px;
@@ -826,7 +842,7 @@ const Container = styled.div`
         .user2 {
            border: 2px solid #312f2f;
           padding: 20px 20px;
-          width: 80%;
+         width: 90%;
           height: auto;
           background-color: #1b1919;
           border-radius: 5px;
@@ -861,7 +877,7 @@ const Container = styled.div`
         .user1 {
           border: 2px solid #312f2f;
            padding: 20px 20px;
-          width: 80%;
+           width: 90%;
           height: auto;
           background-color: #1b1919;
           border-radius: 5px;
@@ -895,7 +911,7 @@ const Container = styled.div`
         .user2{
            border: 2px solid #312f2f;
           padding: 20px 20px;
-          width: 80%;
+          width: 90%;
           height: auto;
           background-color: #1b1919;
           border-radius: 5px;
@@ -949,10 +965,10 @@ const About = () => {
             <div className="bio">
               <h1>Who am i?</h1>
               <span>
-                I'm Creative Director and UI/UX Designer from Sydney,
-                Australia,working in web
+                I'm Creative Director and UI/UX Designer from River State,
+                Nigeria,working in web
                 <br />
-                development and print media. I enjoy turning complex problems
+                development and UI/UX. I enjoy turning complex problems
                 into simple,
                 <br />
                 beautiful and intuitive designs.
@@ -971,7 +987,8 @@ const About = () => {
                     </div>
                     <div className="b">
                       <p className="aa">Phone</p>
-                      <p className="connect">+123 456 7890</p>
+                      <a href="tel:+2348085034076"><p className="connect">+234 808 5034 076</p></a>
+                    
                     </div>
                   </div>
                   <div className="item2">
@@ -980,7 +997,9 @@ const About = () => {
                     </div>
                     <div className="b">
                       <p className="aa">Email</p>
-                      <p className="connect">example@mail.com</p>
+                     
+                      <a href="mailto:princeajuzie1@gmail.com">  <p className="connect" >princeajuzie1@gmail.com</p></a>
+                     
                     </div>
                   </div>
                 </div>
@@ -991,7 +1010,8 @@ const About = () => {
                     </div>
                     <div className="b">
                       <span>Location</span>
-                      <span className="connect">Hong kong china</span>
+                      <a href="https://goo.gl/maps/My8j5QzsaHgabPb6A">  <span className="connect">Rivers State Nigeria</span></a>
+                    
                     </div>
                   </div>
                   <div className="item2">
@@ -1000,7 +1020,7 @@ const About = () => {
                     </div>
                     <div className="b">
                       <p className="aa">Calender</p>
-                      <p className="connect">May 27, 1990</p>
+                      <p className="connect">june 30, 2020</p>
                     </div>
                   </div>
                 </div>
@@ -1018,10 +1038,10 @@ const About = () => {
                   <div className="test">
                     <h1>Ui/Ux Design</h1>
                     <p>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetuer adipiscing elit,
+                      i am a UI & UX Designer,
+                      <br /> i use figma for my Design,
                       <br />
-                      sed diam euismod volutpat.
+                      i have work with some startup company.
                     </p>
                   </div>
                 </div>
@@ -1034,10 +1054,10 @@ const About = () => {
                   <div className="test">
                     <h1>App Development</h1>
                     <p>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetuer adipiscing elit,
+                        coming soon....,
+                      <br />  coming soon....,
                       <br />
-                      sed diam euismod volutpat.
+                       coming soon.....
                     </p>
                   </div>
                 </div>
@@ -1052,10 +1072,10 @@ const About = () => {
                   <div className="test">
                     <h1>Web Development</h1>
                     <p>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetuer adipiscing elit,
+                      I am a Front-end Developer,
+                      <br /> i use React-js framework,
                       <br />
-                      sed diam euismod volutpat.
+                         for all my website.
                     </p>
                   </div>
                 </div>
@@ -1068,10 +1088,10 @@ const About = () => {
                   <div className="test">
                     <h1>Management</h1>
                     <p>
-                      Lorem ipsum dolor sit amet,
-                      <br /> consectetuer adipiscing elit,
+                     I am also a social media manager,
+                      <br /> i have manage alot of nigeria,
                       <br />
-                      sed diam euismod volutpat.
+                     celebrity their website and social media.
                     </p>
                   </div>
                 </div>

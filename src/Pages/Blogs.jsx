@@ -1,11 +1,20 @@
 import Navbar from "../component/Navbar";
 import styled from "styled-components";
-import Blog1 from "../images/blog 1.jpg"
-// import Blog2 from "../images/blog2.jpg"
+import main1 from "../images/main 1.jpg"
+import main2 from "../images/main 2.jpg"
+import main3 from "../images/main 3.jpg"
+import main4 from "../images/main 4.jpeg"
+import main5 from "../images/main 5.jpg"
+import main6 from "../images/main 6.jpg"
+import small1 from "../images/small 1.jpg"
+import small2 from "../images/small 2.jpg"
+import small3 from "../images/small 3.jpg"
+import small4 from "../images/small 4.jpg"
+import small5 from "../images/small 5.jpg"
+import small6 from "../images/small 6.jpg"
 import { useState } from "react";
-import { useEffect } from "react";
 import Bloglist from "../component/Bloglist";
-import { CircularProgress } from "@mui/material";
+
 import Footer from "../component/footer";
 
 
@@ -40,8 +49,8 @@ const Container = styled.div`
                    border: 1px solid #343131;
                      border-radius: 10px;
                    padding: 20px;
-                  width: 300px;
-                  height: fit-content;
+                  width: 100%;
+                  height: auto;
                   margin-bottom: 30px;
                   margin-left: 30px;
                 .blog1{
@@ -146,8 +155,8 @@ const Container = styled.div`
                    border: 1px solid #343131;
                      border-radius: 10px;
                    padding: 20px;
-                  width: 300px;
-                  height: fit-content;
+                  width: 100%;
+                  height: auto;
                   margin-bottom: 30px;
                   margin-left: 30px;
                 .blog1{
@@ -252,9 +261,9 @@ const Container = styled.div`
              .blog{
                    border: 1px solid #343131;
                      border-radius: 10px;
-                   padding: 20px;
-                  width: 300px;
-                  height: fit-content;
+                  padding: 20px;
+                  width: 100%;
+                  height: auto;
                   margin-bottom: 30px;
                   margin-left: 0;
                 .blog1{
@@ -317,6 +326,7 @@ const Container = styled.div`
   
 
     .sec1 {
+      margin-top: 19px;
        text-align: left;
       margin-right: 0;
       font-family: "Courier New", Courier, monospace;
@@ -335,30 +345,76 @@ const Container = styled.div`
 
 
 const Blogs = () => {
-  const [blogs, Setblogs] = useState(null)
-  const [Ispending, Setispending] = useState(true)
-  const [error, Seterror] = useState(null)
-  useEffect(() => {
+  const [blogs, Setblogs] = useState(
 
-    fetch('http://localhost:7000/blogs')
-      .then(res => {
-        // console.log(res)
-        if (!res.ok) {
-          throw Error("could not fetch data for that resources")
-        }
-        return res.json()
-      })
-      .then(data => {
-        //  console.log(data);
-        Setblogs(data);
-        Setispending(false);
-        Seterror(null)
-      })
-      .catch(err => {
-        Setispending(false)
-        Seterror(err.message);
-      })
-  }, []);
+    [
+      {
+        title: "story of my life",
+        body: "How to Own Your Audience by Creating an Email List.",
+        img: main1,
+        smalimg: small1,
+        date: "117 April",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum conseqr quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consetur quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. .",
+        id: 1
+      },
+      {
+        title: "story of my life",
+        body: "How to Own Your Audience by Creating an Email List.",
+        img: main2,
+        smalimg: small2,
+        date: "117 April",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum conseqr quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consetur quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. .",
+        id: 2
+      },
+      {
+        title: "story of my life",
+        body: "How to Own Your Audience by Creating an Email List.",
+        img: main3,
+        smalimg: small3,
+        date: "117 April",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum conseqr quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consetur quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. .",
+        id: 3
+      },
+      {
+        title: "story of my life",
+        body: "How to Own Your Audience by Creating an Email List.",
+        img: main4,
+        smalimg: small4,
+        date: "117 April",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum conseqr quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consetur quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. .",
+        id: 4
+      },
+      {
+        title: "story of my life",
+        body: "How to Own Your Audience by Creating an Email List.",
+        img: main5,
+        smalimg: small5,
+        date: "117 April",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum conseqr quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consetur quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. .",
+        id: 5
+      },
+      {
+        title: "story of my life",
+        body: "How to Own Your Audience by Creating an Email List.",
+        img: main6,
+        smalimg: small6,
+        date: "117 April",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum conseqr quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consetur quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur. \n Lorem ipsum dolor, sit amet consectetur adipisicing  elit. Fuga consequatur delectus porro sapiente molestias, magni quasi sed, enim corporis omnis doloremque soluta inventore dolorum consequuntur quo obcaecati rerum sit non. .",
+        id: 6
+      },
+
+    ]
+  )
+
+
+
+
+
+
+
+  
+
+
 
   return (
     <Container>
@@ -372,8 +428,7 @@ const Blogs = () => {
             <div className="sec2"></div>
           </div>
           <div className="Allblogs">
-            {error && <div className="error">{error}</div>}
-            {Ispending && <div><CircularProgress disableShrink /></div>}
+          
             {blogs && <Bloglist blogs={blogs} />}
           </div>
         </div>

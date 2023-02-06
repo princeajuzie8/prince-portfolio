@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Footer from "../component/footer";
 import Navbar from "../component/Navbar";
-import profile from "../images/profile.jpeg";
-import { BsTwitter } from "react-icons/bs";
+import profile from "../images/profile.jpeg"; 
+import cv from "../images/Prince Ajuzie.pdf"
 // import { useContext } from "react";
 // import { ThemeContext } from "../component/Context";
 const Container = styled.div`
@@ -171,7 +171,7 @@ const Container = styled.div`
     text-align: center;
     height: 80vh;
     display: block;
-    margin-top: 10%;
+    margin-top: 20%;
     margin-bottom: 2%;
    
   }
@@ -201,7 +201,7 @@ const Container = styled.div`
     .socials {
       margin-right: 20px;
       cursor: pointer;
-      
+     
       i {
         background-color: #4a4d4e;
         color: #109dfbdd;
@@ -209,6 +209,10 @@ const Container = styled.div`
         padding: 12px 15px;
         font-size: 18px;
         margin-left: 15px;
+        .twit{
+          font-size: 18px;
+          
+        }
         :hover {
           transition: all 1s ease-in-out;
           background-image: linear-gradient(to right, #fa5252, #dd2476);
@@ -243,7 +247,19 @@ const Container = styled.div`
 `;
 
 const Home = () => {
-  // const {Princes} = useContext(ThemeContext)
+  // const downloadTxtFile = () => {
+  //   // text content
+  //   const texts = [cv]
+  //   // file object
+  //   const file = new Blob(texts, { type: 'image/plain' });
+  //   // anchor link
+  //   const element = document.createElement("a");
+  //   element.href = URL.createObjectURL(file);
+  //   element.download = "100ideas-" + Date.now() + ".txt";
+  //   // simulate link click
+  //   document.body.appendChild(element); // Required for this to work in FireFox
+  //   element.click();
+  // }
   return (
     <>
       <Container>
@@ -253,10 +269,10 @@ const Home = () => {
           <div className="username">
           {/* {Princes} */}
             Prince Ajuzie
-            <div className="career">Full Stack Development</div>
+            <div className="career">Front-End Developer</div>
             <div className="socials">
               <a href="https://web.facebook.com/prince.ajuzie.148"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="https://twitter.com/Princeajuzie2"><i><BsTwitter /></i></a>
+              <a href="https://twitter.com/Princeajuzie2" ><i class="fa-brands fa-twitter"></i></a>
               
             
               <a href="https://www.tiktok.com/@prince.ajuzie"><i class="fa-brands fa-tiktok"></i></a>
@@ -264,10 +280,14 @@ const Home = () => {
               
             </div>
             <div className="cv-download">
-              <button>
-                {" "}
-                <i class="fa-solid fa-download"></i> Download CV
-              </button>
+              <a href={cv} download>
+                <button value="download" >
+                  {" "}
+                  <i class="fa-solid fa-download"></i> Download CV
+                </button>
+
+              </a>
+           
             </div>
           </div>
       
